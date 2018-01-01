@@ -1,0 +1,20 @@
+def resolve_list(t):
+    if isinstance(t, int):
+        return [t]
+    elif isinstance(t, (list, tuple)):
+        result = []
+        def update_result(t):
+            for item in t:
+                if isinstance(item,(list, tuple)):
+                    update_result(item)
+                else:    
+                    result.append(item)
+        update_result(t)  
+        return result
+        
+def max_value(t):
+    t_flatten = resolve_list(t)
+    if len(t_flatten) == 0:
+        return None
+    return max(t_flatten)
+max_value(((5, (1,2), [[1],[2]])))

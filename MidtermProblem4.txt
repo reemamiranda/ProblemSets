@@ -1,0 +1,8 @@
+
+def deep_reverse(L):
+    L.reverse()
+    for sublist in L:
+        sublist.reverse()
+    return L
+L = [[1, 2], [3, 4], [5, 6, 7]]
+(deep_reverse(L))
