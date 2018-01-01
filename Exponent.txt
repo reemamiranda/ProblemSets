@@ -1,0 +1,11 @@
+def closest_power(base, num):
+   
+ for i in range(0,num-1):
+       
+   while base**i>=num>base**(i-1):
+          
+     return i
+
+a=closest_power(4, 16)
+
+print(a)

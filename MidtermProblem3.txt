@@ -6,4 +6,3 @@ def closest_power(base, num):
         exp+=1
     return exp if base ** exp - num < num - base ** (exp - 1) else exp - 1
 a=closest_power(4,1)
-print(a)
