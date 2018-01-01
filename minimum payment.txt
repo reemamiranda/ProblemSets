@@ -1,0 +1,30 @@
+InitialBalance = float(raw_input("Enter your current balance: "))
+InterestRate = float(raw_input("Enter the yearly interest rate as a decimal: "))
+
+
+monthlyPayment = 0
+monthlyInterestRate = InterestRate/12
+balance = InitialBalance
+
+
+while balance > 0:
+    monthlyPayment += 10
+    balance = InitialBalance
+    numMonths = 0
+
+    while numMonths < 12 and balance > 0:
+
+        numMonths += 1
+
+        interest = monthlyInterestRate * balance
+
+        balance -= monthlyPayment
+
+        balance += interest
+
+    balance = round(balance,2)
+
+print "RESULT"
+print "Monthly payment to pay off debt in 1 year: " , monthlyPayment
+print "Number of months need to pay the debt: " , numMonths
+print "Balance after debt is paid: " , balance
