@@ -6,7 +6,6 @@ def account(balance,mrate,arate):
         balance-=monthlyPayment
         interest=balance*(arate/12)
         balance+=interest
-       # print("Month %d remaining balance:.%.2f" %(i,balance))
     print("Remaining balance %.2f" %balance)
 bal=int(input("enter the bal\n"))
 mrate=float(input("enter the mrate\n"))
